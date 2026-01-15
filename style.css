@@ -76,6 +76,13 @@ a:hover {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+.robot-mini-display img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
 /* Research Section */
 .research-section {
     margin-top: 40px;
