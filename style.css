@@ -194,3 +194,9 @@ footer {
         margin: 0 auto;
     }
 }
+.inline-logo {
+    height: 1.2em;
+    width: auto;
+    vertical-align: text-bottom;
+    margin-left: 4px;
+}
