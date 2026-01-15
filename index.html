@@ -1,44 +1,116 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Junseok Lee - Personal Homepage</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
-  <header>
-    <h1>Hi, I'm [Your Name]</h1>
-    <p>Web Developer | Designer | Creator</p>
-  </header>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
+    <main class="container">
+        <!-- Header / Profile Section -->
+        <header class="profile-header">
+            <div class="profile-info">
+                <h1>Junseok Lee</h1>
+                <p class="bio">
+                    I am a Robotics Researcher at the <strong>Advanced Robotics Lab, LG Electronics</strong>, where I
+                    focus on advancing the capabilities of humanoid robots.
+                </p>
+                <p class="bio">
+                    I earned my Ph.D. in AI Convergence (Intelligent Robotics Program) from <strong>Gwangju Institute of
+                        Science and Technology (GIST)</strong> in 2025, where I was a member of the AI Lab under the
+                    supervision of Prof. <strong>Kyoobin Lee</strong>. Before that, I received my B.S. in Aerospace &
+                    Software Engineering from <strong>Gyeongsang National University (GNU)</strong> in 2019.
+                </p>
+                <div class="links">
+                    <a href="mailto:your.email@example.com">Email</a> /
+                    <a href="#">CV</a> /
+                    <a href="#">Linkedin</a> /
+                    <a href="#">Github</a>
+                </div>
+            </div>
+            <div class="profile-photo">
+                <img src="assets/photo_junseoklee.JPG" alt="Junseok Lee">
+            </div>
+        </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Write a short introduction about yourself here.</p>
-  </section>
+        <!-- Research Section -->
+        <section class="research-section">
+            <h2>Research</h2>
+            <div class="research-intro">
+                <p>
+                    My research lies at the intersection of computer vision and robot learning, with a particular focus
+                    on making complex AI models practical for real-world robotic systems. My primary research interests
+                    include:
+                </p>
+                <ul>
+                    <li>Robot Vision & Vision-Language-Action Models (VLA)</li>
+                    <li>Neural Architecture Design</li>
+                    <li>Model Compression & Efficiency (e.g., Knowledge Distillation)</li>
+                </ul>
+            </div>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>Project Title</h3>
-      <p>Short description of the project.</p>
-      <a href="#">View Project</a>
-    </div>
-  </section>
+            <div class="publication-list">
+                <!-- Publication Item 1 -->
+                <div class="publication-item">
+                    <div class="pub-image">
+                        <img src="assets/paper1_placeholder.png" alt="Paper Diagram">
+                    </div>
+                    <div class="pub-details">
+                        <h3><a href="#">AMPED: Adaptive Multi-Objective Projection for balancing Exploration and skill
+                                Diversification</a></h3>
+                        <p class="authors">
+                            Geonwoo Cho*, Jaemoon Lee*, Jaegyun Im, <strong>Junseok Lee</strong>, Jihwan Lee, Sundong
+                            Kim
+                        </p>
+                        <p class="venue">Under Review</p>
+                        <div class="pub-links">
+                            <a href="#">Paper</a> / <a href="#">Website</a> / <a href="#">Code</a>
+                        </div>
+                        <p class="abstract">
+                            AMPED is a framework for skill-based reinforcement learning that simultaneously maximizes
+                            state coverage and skill diversity through several carefully designed components.
+                        </p>
+                    </div>
+                </div>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
-  </section>
+                <!-- Publication Item 2 -->
+                <div class="publication-item">
+                    <div class="pub-image">
+                        <img src="assets/paper2_placeholder.png" alt="Paper Diagram">
+                    </div>
+                    <div class="pub-details">
+                        <h3><a href="#">Evaluating Simplicial Normalization in Multi-Task Reinforcement Learning</a>
+                        </h3>
+                        <p class="authors">
+                            Geonwoo Cho*, <strong>Junseok Lee*</strong>, Jaemoon Lee
+                        </p>
+                        <p class="venue">Korea Software Conference 2024</p>
+                        <div class="pub-links">
+                            <a href="#">Paper</a>
+                        </div>
+                        <p class="abstract">
+                            This research investigates Simplicial Normalization (SimNorm) as an activation function for
+                            multi-task reinforcement learning.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <footer>
-    <p>© 2025 [Your Name]. All rights reserved.</p>
-  </footer>
+        <footer>
+            <p>Website template from <a href="https://jonbarron.info/" target="_blank">Jon Barron</a>.</p>
+        </footer>
+    </main>
+
 </body>
+
 </html>
