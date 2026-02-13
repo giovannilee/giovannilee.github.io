@@ -3,109 +3,269 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="description"
+        content="CD-FKD: Cross-Domain Feature Knowledge Distillation for Robust Single-Domain Generalization in Object Detection">
+    <meta name="keywords" content="CD-FKD, Object Detection, Domain Generalization">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CD-FKD: Cross-Domain Feature Knowledge Distillation</title>
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Noto+Sans:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-PYVRSFMDRL');
+    </script>
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
     <link rel="stylesheet" href="./static/css/index.css">
+    <link rel="icon" href="./static/images/favicon.svg">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
 </head>
 
 <body>
 
-    <div class="container">
-        <header class="header">
-            <h1 class="title">CD-FKD: Cross-Domain Feature Knowledge Distillation for Robust Single-Domain
-                Generalization in Object Detection</h1>
-
-            <div class="authors">
-                <span class="author"><a href="../index.html">Junseok Lee</a><sup>1,2</sup></span>,
-                <span class="author"><a href="#">Sungho Shin</a><sup>3</sup></span>,
-                <span class="author"><a href="#">Seongju Lee</a><sup>1</sup></span>,
-                <span class="author"><a href="#">Kyoobin Lee</a><sup>1</sup></span>
-            </div>
-
-            <div class="affiliations">
-                <span class="affiliation"><sup>1</sup>Gwangju Institute of Science and Technology (GIST)</span>
-                <span class="affiliation"><sup>2</sup>LG Electronics</span>
-                <span class="affiliation"><sup>3</sup>NAVER Corp.</span>
-            </div>
-
-            <div class="venue">
-                IEEE International Conference on Robotics and Automation (ICRA 2026)
-            </div>
-
-            <div class="links">
-                <a href="#" class="btn">Paper</a>
-                <a href="#" class="btn">arXiv</a>
-                <a href="#" class="btn">Code</a>
-            </div>
-        </header>
-
-        <div class="teaser">
-            <!-- Image or Video Placeholder -->
-            <div class="teaser-placeholder">
-                <p>Teaser Image / Video Placeholder</p>
-            </div>
-            <p class="caption">
-                <strong>Figure 1.</strong> Conceptual overview of CD-FKD. Our method distills feature knowledge across
-                domains to improve robustness.
-            </p>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
         </div>
-
-        <section class="section abstract">
-            <h2>Abstract</h2>
-            <p>
-                Single-Domain Generalization (SDG) in Object Detection aims to train a detector on a single source
-                domain that generalizes well to unseen target domains. Existing methods often rely on image-level
-                augmentations or feature alignment, which may not fully capture the underlying invariant features
-                required for robust detection. In this paper, we propose Cross-Domain Feature Knowledge Distillation
-                (CD-FKD), a novel framework that improves generalization by distilling feature-level knowledge. We
-                introduce a teacher-student architecture where the teacher learns from augmented views of the source
-                domain, and the student learns to reconstruct these features from the original view, effectively
-                learning domain-invariant representations. Extensive experiments on multiple benchmark datasets
-                demonstrate that CD-FKD significantly outperforms state-of-the-art SDG methods in various domain shift
-                scenarios.
-            </p>
-        </section>
-
-        <section class="section">
-            <h2>Method</h2>
-            <p>
-                Detailed explanation of the proposed method goes here. You can add diagrams and text describing the
-                architecture, loss functions, and training procedure.
-            </p>
-            <div class="figure-placeholder">
-                <p>Method Diagram Placeholder</p>
+        <div class="navbar-menu">
+            <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+                <a class="navbar-item" href="../index.html">
+                    <span class="icon">
+                        <i class="fas fa-home"></i>
+                    </span>
+                </a>
             </div>
-        </section>
 
-        <section class="section">
-            <h2>Results</h2>
-            <p>
-                Quantitative and qualitative results demonstrating the effectiveness of CD-FKD.
-            </p>
-            <div class="figure-placeholder">
-                <p>Results Table / Figure Placeholder</p>
+        </div>
+    </nav>
+
+
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column has-text-centered">
+                        <h1 class="title is-1 publication-title">CD-FKD: Cross-Domain Feature Knowledge Distillation for
+                            Robust Single-Domain Generalization in Object Detection</h1>
+                        <div class="is-size-5 publication-authors">
+                            <span class="author-block">
+                                <a href="../index.html">Junseok Lee</a><sup>1,2</sup>,</span>
+                            <span class="author-block">
+                                <a href="#">Sungho Shin</a><sup>3</sup>,</span>
+                            <span class="author-block">
+                                <a href="#">Seongju Lee</a><sup>1</sup>,
+                            </span>
+                            <span class="author-block">
+                                <a href="#">Kyoobin Lee</a><sup>1</sup>
+                            </span>
+                        </div>
+
+                        <div class="is-size-5 publication-authors">
+                            <span class="author-block"><sup>1</sup>Gwangju Institute of Science and Technology
+                                (GIST),</span>
+                            <span class="author-block"><sup>2</sup>LG Electronics,</span>
+                            <span class="author-block"><sup>3</sup>Gyeongsang National University (GNU)</span>
+                        </div>
+
+                        <div class="column has-text-centered">
+                            <div class="publication-links">
+                                <!-- PDF Link. -->
+                                <span class="link-block">
+                                    <a href="#" class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fas fa-file-pdf"></i>
+                                        </span>
+                                        <span>Paper</span>
+                                    </a>
+                                </span>
+                                <span class="link-block">
+                                    <a href="#" class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="ai ai-arxiv"></i>
+                                        </span>
+                                        <span>arXiv</span>
+                                    </a>
+                                </span>
+                                <!-- Video Link. -->
+                                <span class="link-block">
+                                    <a href="#" class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fab fa-youtube"></i>
+                                        </span>
+                                        <span>Video</span>
+                                    </a>
+                                </span>
+                                <!-- Code Link. -->
+                                <span class="link-block">
+                                    <a href="#" class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fab fa-github"></i>
+                                        </span>
+                                        <span>Code</span>
+                                    </a>
+                                </span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="section bibtex">
-            <h2>BibTeX</h2>
+    <section class="hero teaser">
+        <div class="container is-max-desktop">
+            <div class="hero-body">
+                <!-- Teaser Video/Image Placeholder -->
+                <div
+                    style="background-color: #eee; width: 100%; height: 400px; display: flex; align-items: center; justify-content: center; border-radius: 10px;">
+                    <p style="color: #888; font-size: 24px;">Teaser Image / Video Placeholder</p>
+                </div>
+                <h2 class="subtitle has-text-centered">
+                    <span class="dnerf">CD-FKD</span> improves robust object detection in unseen domains by distilling
+                    feature knowledge.
+                </h2>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section">
+        <div class="container is-max-desktop">
+            <!-- Abstract. -->
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3">Abstract</h2>
+                    <div class="content has-text-justified">
+                        <p>
+                            Single-Domain Generalization (SDG) in Object Detection aims to train a detector on a single
+                            source domain that generalizes well to unseen target domains. Existing methods often rely on
+                            image-level augmentations or feature alignment, which may not fully capture the underlying
+                            invariant features required for robust detection. In this paper, we propose Cross-Domain
+                            Feature Knowledge Distillation (CD-FKD), a novel framework that improves generalization by
+                            distilling feature-level knowledge. We introduce a teacher-student architecture where the
+                            teacher learns from augmented views of the source domain, and the student learns to
+                            reconstruct these features from the original view, effectively learning domain-invariant
+                            representations. Extensive experiments on multiple benchmark datasets demonstrate that
+                            CD-FKD significantly outperforms state-of-the-art SDG methods in various domain shift
+                            scenarios.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!--/ Abstract. -->
+        </div>
+    </section>
+
+
+    <section class="section">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-full-width">
+                    <h2 class="title is-3">Method</h2>
+                    <div class="content has-text-justified">
+                        <p>
+                            Detailed explanation of the proposed method goes here. You can add diagrams and text
+                            describing the architecture, loss functions, and training procedure.
+                        </p>
+                        <!-- Method Diagram Placeholder -->
+                        <div
+                            style="background-color: #eee; width: 100%; height: 300px; display: flex; align-items: center; justify-content: center; border-radius: 10px; margin-bottom: 20px;">
+                            <p style="color: #888;">Method Diagram Placeholder</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-full-width">
+                    <h2 class="title is-3">Results</h2>
+                    <div class="content has-text-justified">
+                        <p>
+                            Quantitative and qualitative results demonstrating the effectiveness of CD-FKD.
+                        </p>
+                        <!-- Results Placeholder -->
+                        <div
+                            style="background-color: #eee; width: 100%; height: 300px; display: flex; align-items: center; justify-content: center; border-radius: 10px; margin-bottom: 20px;">
+                            <p style="color: #888;">Results Table / Figure Placeholder</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section" id="BibTeX">
+        <div class="container is-max-desktop content">
+            <h2 class="title">BibTeX</h2>
             <pre><code>@inproceedings{lee2026cdfkd,
   author    = {Lee, Junseok and Shin, Sungho and Lee, Seongju and Lee, Kyoobin},
   title     = {CD-FKD: Cross-Domain Feature Knowledge Distillation for Robust Single-Domain Generalization in Object Detection},
   booktitle = {IEEE International Conference on Robotics and Automation (ICRA)},
   year      = {2026},
 }</code></pre>
-        </section>
+        </div>
+    </section>
 
-    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="content has-text-centered">
+                <a class="icon-link" href="#">
+                    <i class="fas fa-file-pdf"></i>
+                </a>
+                <a class="icon-link" href="#" class="external-link" disabled>
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <div class="columns is-centered">
+                <div class="column is-8">
+                    <div class="content">
+                        <p>
+                            This website is licensed under a <a rel="license"
+                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                                Commons Attribution-ShareAlike 4.0 International License</a>.
+                        </p>
+                        <p>
+                            This means you are free to borrow the <a
+                                href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+                            we just ask that you link back to this page in the footer.
+                            Please remember to remove the analytics code included in the header of the website which
+                            you do not want on your website.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 </body>
 
